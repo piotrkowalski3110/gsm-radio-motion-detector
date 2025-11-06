@@ -176,10 +176,6 @@ Receive: "Wykryto ruch!"
 
 ---
 
-### Authors
-- Piotr Kowalski
-- Denis Piętak
-
 Project created as part of Sensor Networks course, Telecommunications S1, Semester 7.
 
 ---
@@ -355,9 +351,5 @@ Odpowiedź: "Wykryto ruch!"
 - Pozostałe moduły: kompatybilne z 3.3-5V
 
 ---
-
-### Autorzy
-- Piotr Kowalski
-- Denis Piętak
 
 Projekt stworzony w ramach przedmiotu Sieci Sensoryczne, Teleinformatyka S1, Semestr 7.
