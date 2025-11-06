@@ -82,7 +82,7 @@ motion-gsm-radio-sensor/
 ├── docs/
 │   ├── transmitter_scheme.png   # Transmitter wiring diagram
 │   ├── receiver_scheme.png      # Receiver wiring diagram
-│   └── system_photo.jpg         # Physical setup photo
+│   └── system_photo.png         # Physical setup photo
 └── README.md
 ```
 
@@ -322,7 +322,7 @@ motion-gsm-radio-sensor/
 ├── docs/
 │   ├── transmitter_scheme.png   # Schemat połączeń nadajnika
 │   ├── receiver_scheme.png      # Schemat połączeń odbiornika
-│   └── system_photo.jpg         # Zdjęcie fizycznego układu
+│   └── system_photo.png         # Zdjęcie fizycznego układu
 └── README.md
 ```
 
