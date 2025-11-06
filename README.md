@@ -20,7 +20,9 @@ The project implements a wireless sensor network with the following key features
 - Real-time clock for event timestamping
 - Visual and audio signaling
 
-![System Diagram](docs/transmitter_scheme.png)
+![Schemat Systemu](docs/transmitter_scheme.png)
+![Schemat Systemu](docs/receiver_scheme.png)
+![Schemat Systemu](docs/system_photo.png)
 
 ---
 
@@ -88,27 +90,6 @@ motion-gsm-radio-sensor/
 
 ---
 
-### Pin Configuration
-
-**Transmitter:**
-- DHT11: Digital pin 0
-- Buzzer: Digital pin 1
-- SIM800L TX: Digital pin 2
-- SIM800L RX: Digital pin 3
-- DS1302 RST: Digital pin 4
-- RCWL-0516: Digital pin 5
-- DS1302 CLK: Digital pin 6
-- DS1302 DAT: Digital pin 7
-- nRF24L01 CE: Digital pin 8
-- nRF24L01 CSN: Digital pin 9
-
-**Receiver:**
-- LED: Digital pin 3
-- nRF24L01 CE: Digital pin 8
-- nRF24L01 CSN: Digital pin 9
-
----
-
 ### Required Libraries
 - SoftwareSerial (built-in)
 - DHT11
@@ -125,7 +106,7 @@ Install via Arduino Library Manager or manually download from GitHub.
 ### Installation
 
 1. **Hardware Setup:**
-   - Connect components according to pin configuration
+   - Connect components according to the enclosed diagram
    - Use LM2596 converter to provide stable 4.0V for SIM800L
    - Use proper adapters for nRF24L01 modules to ensure stable power supply
 
@@ -187,52 +168,11 @@ Receive: "Wykryto ruch!"
 **nRF24L01 Radio:**
 - Frequency: 2.4 GHz
 - Data rate: 2 Mbps
-- Network channel: 90
 
 **Power Requirements:**
 - Arduino UNO: 5V (USB or external)
 - SIM800L: 4.0V (via LM2596 converter)
 - Other modules: 3.3-5V compatible
-
----
-
-### Troubleshooting
-
-**SIM800L Issues:**
-- Ensure stable 4.0V power supply using LM2596 converter
-- Check antenna connection
-- Verify SIM card has active cellular service
-- Allow 10-15 seconds for module initialization
-
-**nRF24L01 Communication Problems:**
-- Use dedicated power adapter modules for stable voltage
-- Check CE and CSN pin connections
-- Verify both modules use same channel (90) and data rate
-- Keep antennas away from metal objects
-
-**Motion Detection:**
-- RCWL-0516 may be sensitive to electrical noise
-- Allow warm-up time after power-on
-- Adjust positioning for optimal coverage
-
-**SMS Rate Limiting:**
-- System sends max 1 SMS per minute for motion detection
-- This prevents excessive SMS charges
-- Manual commands (getTemp, getHumid, getBuzz) work without delay
-
----
-
-### Future Improvements
-- Battery power support with sleep modes
-- Multiple sensor nodes in mesh network
-- Web dashboard for data visualization
-- SD card logging for historical data
-- Adjustable sensitivity settings via SMS
-
----
-
-### License
-MIT License - See LICENSE file for details
 
 ---
 
@@ -261,6 +201,8 @@ Projekt realizuje bezprzewodową sieć czujników z następującymi funkcjami:
 - Sygnalizacja wizualna i dźwiękowa
 
 ![Schemat Systemu](docs/transmitter_scheme.png)
+![Schemat Systemu](docs/receiver_scheme.png)
+![Schemat Systemu](docs/system_photo.png)
 
 ---
 
@@ -328,27 +270,6 @@ motion-gsm-radio-sensor/
 
 ---
 
-### Konfiguracja Pinów
-
-**Nadajnik:**
-- DHT11: Pin cyfrowy 0
-- Buzzer: Pin cyfrowy 1
-- SIM800L TX: Pin cyfrowy 2
-- SIM800L RX: Pin cyfrowy 3
-- DS1302 RST: Pin cyfrowy 4
-- RCWL-0516: Pin cyfrowy 5
-- DS1302 CLK: Pin cyfrowy 6
-- DS1302 DAT: Pin cyfrowy 7
-- nRF24L01 CE: Pin cyfrowy 8
-- nRF24L01 CSN: Pin cyfrowy 9
-
-**Odbiornik:**
-- LED: Pin cyfrowy 3
-- nRF24L01 CE: Pin cyfrowy 8
-- nRF24L01 CSN: Pin cyfrowy 9
-
----
-
 ### Wymagane Biblioteki
 - SoftwareSerial (wbudowana)
 - DHT11
@@ -365,7 +286,7 @@ Instalacja przez Arduino Library Manager lub ręcznie z GitHub.
 ### Instalacja
 
 1. **Konfiguracja Sprzętowa:**
-   - Podłącz komponenty zgodnie z konfiguracją pinów
+   - Podłącz komponenty zgodnie z załączonym schematem
    - Użyj przetwornicy LM2596 do zapewnienia stabilnych 4.0V dla SIM800L
    - Użyj odpowiednich adapterów dla modułów nRF24L01 do stabilnego zasilania
 
@@ -427,52 +348,11 @@ Odpowiedź: "Wykryto ruch!"
 **Radio nRF24L01:**
 - Częstotliwość: 2.4 GHz
 - Przepływność: 2 Mbps
-- Kanał sieciowy: 90
 
 **Wymagania Zasilania:**
 - Arduino UNO: 5V (USB lub zewnętrzne)
 - SIM800L: 4.0V (przez przetwornicę LM2596)
 - Pozostałe moduły: kompatybilne z 3.3-5V
-
----
-
-### Rozwiązywanie Problemów
-
-**Problemy z SIM800L:**
-- Upewnij się o stabilnym zasilaniu 4.0V przez przetwornicę LM2596
-- Sprawdź połączenie anteny
-- Zweryfikuj, czy karta SIM ma aktywną usługę komórkową
-- Poczekaj 10-15 sekund na inicjalizację modułu
-
-**Problemy Komunikacji nRF24L01:**
-- Użyj dedykowanych modułów adapterowych do stabilnego napięcia
-- Sprawdź połączenia pinów CE i CSN
-- Zweryfikuj, czy oba moduły używają tego samego kanału (90) i przepływności
-- Trzymaj anteny z dala od metalowych obiektów
-
-**Detekcja Ruchu:**
-- RCWL-0516 może być wrażliwy na zakłócenia elektryczne
-- Odczekaj czas rozgrzewki po włączeniu zasilania
-- Dostosuj pozycjonowanie dla optymalnego pokrycia
-
-**Ograniczenie Częstości SMS:**
-- System wysyła max 1 SMS na minutę dla detekcji ruchu
-- Zapobiega to nadmiernym opłatom za SMS
-- Komendy ręczne (getTemp, getHumid, getBuzz) działają bez opóźnienia
-
----
-
-### Przyszłe Usprawnienia
-- Wsparcie zasilania bateryjnego z trybami uśpienia
-- Wiele węzłów czujnikowych w sieci mesh
-- Panel webowy do wizualizacji danych
-- Logowanie na karcie SD dla danych historycznych
-- Regulowana czułość przez SMS
-
----
-
-### Licencja
-Licencja MIT - Zobacz plik LICENSE dla szczegółów
 
 ---
 
